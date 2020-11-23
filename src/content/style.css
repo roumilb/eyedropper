@@ -1,0 +1,36 @@
+.color__picker__extension{
+	width: 88px;
+	height: 108px;
+	position: absolute;
+	z-index: 9999999999;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	display: block;
+	line-height: 0;
+}
+
+.color__picker__extension_one_pixel{
+	width: 6px;
+	height: 6px;
+	display: inline-block;
+	margin: 0 !important;
+	border: 1px solid rgba(200, 200, 200, .25);
+	box-sizing: content-box !important;
+}
+
+.color__picker__extension_actual_color{
+	width: 88px;
+	height: 20px;
+	background-color: white;
+	color: black;
+	font-size: 13px;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.color__picker__extension_5_5{
+	border-color: red;
+}
+
+.color__picker__extension__cover{
+	cursor: none;
+}
