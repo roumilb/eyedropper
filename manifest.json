@@ -1,7 +1,7 @@
 {
   "name": "Eyedropper - Color picker",
   "version": "1.0",
-  "description": "Test",
+  "description": "Pick a color on the current page",
   "background": {
     "scripts": [
       "src/background/background.js"
