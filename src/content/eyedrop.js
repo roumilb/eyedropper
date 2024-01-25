@@ -10,7 +10,18 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     }
 });
 
+function disableScrolling(){
+    var x=window.scrollX;
+    var y=window.scrollY;
+    window.onscroll=function(){window.scrollTo(x, y);};
+}
+
+function enableScrolling(){
+    window.onscroll=function(){};
+}
+
 function init() {
+    disableScrolling();
     let port = chrome.runtime.connect({name: 'eyedropp_color_picker'});
     port.postMessage({data: 'start'});
     port.onMessage.addListener(function (res) {
@@ -76,6 +87,7 @@ function init() {
             window.addEventListener('mousemove', mouseMoveFunction);
 
             const clickWindow = () => {
+                enableScrolling();
                 document.querySelector('.color__picker__extension__cover').remove();
                 window.removeEventListener('mousemove', mouseMoveFunction);
                 window.removeEventListener('click', clickWindow);
